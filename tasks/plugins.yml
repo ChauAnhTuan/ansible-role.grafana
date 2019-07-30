@@ -6,6 +6,9 @@
     paths: "{{ grafana_data_dir }}/plugins"
   register: installed_plugins
 
+- debug:
+    var: installed_plugins
+
 - name: Install plugins
   become: true
   command: "grafana-cli plugins install {{ item }}"
