@@ -17,4 +17,3 @@
     enabled: "{{ service_service_enabled }}"
 
 - include_tasks: datasources.yml
-    notify: restart {{ service_name }}
