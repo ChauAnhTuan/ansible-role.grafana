@@ -4,6 +4,8 @@ service_name: grafana-server
 service_service_state: started
 service_service_enabled: true
 
+grafana_use_provisioning: false
+
 grafana_api_url: http://localhost:3000
 
 grafana_data_dir: "/var/lib/grafana"
