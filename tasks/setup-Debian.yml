@@ -1,4 +1,9 @@
 ---
+- name: Update apt cache if MySQL is not yet installed.
+  apt:
+    name: python-apt
+    update_cache: true
+
 - name: Add {{ service_name }} repository
   apt_repository:
     repo: deb {{ apt_repository }}
