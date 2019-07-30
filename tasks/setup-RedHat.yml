@@ -4,12 +4,12 @@
   get_url:
     url: https://packages.grafana.com/gpg.key
     dest: "{{ item.sslcacert }}"
-  with_items: {{ yum_repository }}
+  with_items: "{{ yum_repository }}"
 
 - name: Add {{ service_name }} repository
   yum_repository:
     name: "{{ item.name }}"
-    description: "{{ item.name }}" YUM repo
+    description: "{{ item.name }} YUM repo"
     baseurl: "{{ item.baseurl }}"
     repo_gpgcheck: "{{ item.repo_gpgcheck }}"
     enabled: "{{ item.enabled }}"
@@ -17,7 +17,7 @@
     gpgkey: "{{ item.gpgkey }}"
     sslverify: "{{ item.sslverify }}"
     sslcacert: "{{ item.sslcacert }}"
-  with_items: {{ yum_repository }}
+  with_items: "{{ yum_repository }}"
 
 - name: Ensure package idependent are installed.
   yum:

@@ -6,7 +6,7 @@
 
 - name: Add an Apt signing key for {{ service_name }}
   apt_key:
-    url: {{ apt_gpg_key }}
+    url: "{{ apt_gpg_key }}"
     state: present
 
 - name: Ensure package idependent are installed.
