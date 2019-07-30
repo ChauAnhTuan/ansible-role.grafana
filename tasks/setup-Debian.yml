@@ -1,7 +1,7 @@
 ---
 - name: Update apt cache and ensure python-apt installed.
   apt:
-    name: 
+    name:
       - python-apt
       - apt-transport-https
     update_cache: true
