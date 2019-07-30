@@ -1,0 +1,5 @@
+---
+packages_name: grafana
+service_name: grafana-server
+service_service_state: started
+service_service_enabled: true

@@ -1,0 +1,22 @@
+---
+- name: Add {{ service_name }} repository
+  apt_repository:
+    repo: deb {{ apt_repository }}
+    state: present
+
+- name: Add an Apt signing key for {{ service_name }}
+  apt_key:
+    url: {{ apt_gpg_key }}
+    state: present
+
+- name: Ensure package idependent are installed.
+  apt:
+    name: "{{ apt_packages_name }}"
+    update_cache: true
+    state: present
+
+- name: Ensure {{ service_name }} are installed.
+  apt:
+    name: "{{ packages_name }}"
+    update_cache: true
+    state: present
