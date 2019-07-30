@@ -3,3 +3,25 @@ packages_name: grafana
 service_name: grafana-server
 service_service_state: started
 service_service_enabled: true
+
+grafana_url: http://localhost:3000
+grafana_security:
+  admin_user: admin
+  admin_password: admin
+
+grafana_datasources:
+  - name: "Zabbix"
+    type: "alexanderzobnin-zabbix-datasource"
+    access: "proxy"
+    url: "http://zabbix-server.com"
+    basicAuth: false
+    basicAuthUser: "admin"
+    basicAuthPassword: "password"
+    user: Admin
+    password: zabbix
+    trends: true
+    isDefault: true
+    jsonData:
+      tlsAuth: false
+      tlsAuthWithCACert: false
+      tlsSkipVerify: true
