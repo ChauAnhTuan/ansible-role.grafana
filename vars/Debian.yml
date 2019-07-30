@@ -2,5 +2,7 @@
 apt_packages_name:
   - software-properties-common
   - apt-transport-https
+  - adduser
+  - libfontconfig1
 apt_repository: 'https://packages.grafana.com/oss/deb stable main'
 apt_gpg_key: 'https://packages.grafana.com/gpg.key'
