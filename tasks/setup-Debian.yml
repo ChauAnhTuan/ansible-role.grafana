@@ -1,7 +1,9 @@
 ---
 - name: Update apt cache and ensure python-apt installed.
   apt:
-    name: python-apt
+    name: 
+      - python-apt
+      - apt-transport-https
     update_cache: true
 
 - name: Add an Apt signing key for {{ service_name }}
