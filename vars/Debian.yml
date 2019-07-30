@@ -1,5 +1,6 @@
 ---
 apt_packages_name:
+  - python-apt
   - apt-transport-https
   - ca-certificates
   - software-properties-common
