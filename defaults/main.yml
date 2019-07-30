@@ -18,11 +18,11 @@ grafana_plugins:
 grafana_datasources:
   - name: "Zabbix"
     type: "alexanderzobnin-zabbix-datasource"
-    access: "proxy"
+    access: "direct"
     url: "http://zabbix-server.com"
     basicAuth: false
-    basicAuthUser: "admin"
-    basicAuthPassword: "password"
+    # basicAuthUser: "admin"
+    # basicAuthPassword: "password"
     user: Admin
     password: zabbix
     trends: true
