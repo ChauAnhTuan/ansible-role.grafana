@@ -27,6 +27,8 @@ grafana_datasources:
     trends: true
     isDefault: true
     jsonData:
+      user: Admin
+      password: zabbix
       tlsAuth: false
       tlsAuthWithCACert: false
       tlsSkipVerify: true
