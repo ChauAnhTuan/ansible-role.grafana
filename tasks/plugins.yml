@@ -10,7 +10,7 @@
 
 - name: set grafana_plugins
   set_fact:
-    grafana_plugins: "{{ grafana_plugins | difference(installed_plugins.stdout_lines) }}"
+    grafana_plugins_ne: "{{ grafana_plugins | difference(installed_plugins.stdout_lines) }}"
 
 - debug:
     var: grafana_plugins
@@ -18,11 +18,11 @@
 - name: Install plugins
   become: true
   command: "grafana-cli plugins install {{ item }}"
-  with_items: "{{ grafana_plugins }}"
+  with_items: "{{ grafana_plugins_ne }}"
   register: _plugin_install
   until: _plugin_install is succeeded
   retries: 5
   delay: 2
   notify:
     - restart {{ service_name }}
-  when: grafana_plugins is defined
+  when: grafana_plugins_ne is defined
