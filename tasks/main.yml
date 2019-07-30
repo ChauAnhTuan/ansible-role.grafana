@@ -16,4 +16,5 @@
     state: "{{ service_service_state }}"
     enabled: "{{ service_service_enabled }}"
 
+- include_tasks: plugins.yml
 - include_tasks: datasources.yml
