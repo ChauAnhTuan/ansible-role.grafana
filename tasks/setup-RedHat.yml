@@ -1,5 +1,4 @@
 ---
-
 - name: Download gpg key
   get_url:
     url: https://packages.grafana.com/gpg.key
