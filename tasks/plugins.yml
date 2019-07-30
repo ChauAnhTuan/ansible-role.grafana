@@ -1,11 +1,8 @@
 ---
 - name: Check which plugins are installed
   command: "ls {{ grafana_data_dir }}/plugins"
-  # find:
-  #   file_type: directory
-  #   recurse: false
-  #   paths: "{{ grafana_data_dir }}/plugins"
   register: installed_plugins
+  changed_when: false
   when: grafana_plugins is defined
 
 - name: set grafana_plugins
