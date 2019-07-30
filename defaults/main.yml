@@ -23,8 +23,8 @@ grafana_datasources:
     basicAuth: false
     # basicAuthUser: "admin"
     # basicAuthPassword: "password"
-    user: Admin
-    password: zabbix
+    url_username: Admin
+    url_password: zabbix
     trends: true
     isDefault: true
     jsonData:
