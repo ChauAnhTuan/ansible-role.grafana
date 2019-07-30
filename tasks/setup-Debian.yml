@@ -4,14 +4,14 @@
     name: python-apt
     update_cache: true
 
-- name: Add {{ service_name }} repository
-  apt_repository:
-    repo: deb {{ apt_repository }}
-    state: present
-
 - name: Add an Apt signing key for {{ service_name }}
   apt_key:
     url: "{{ apt_gpg_key }}"
+    state: present
+
+- name: Add {{ service_name }} repository
+  apt_repository:
+    repo: deb {{ apt_repository }}
     state: present
 
 - name: Ensure package idependent are installed.
