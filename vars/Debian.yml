@@ -1,6 +1,7 @@
 ---
 apt_packages_name:
   - apt-transport-https
+  - ca-certificates
   - software-properties-common
   - adduser
   - libfontconfig1
