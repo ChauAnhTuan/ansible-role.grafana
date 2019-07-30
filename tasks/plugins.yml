@@ -1,4 +1,9 @@
 ---
+- name: Create a directory plugins if it does not exist
+  file:
+    path: "{{ grafana_data_dir }}/plugins"
+    state: directory
+
 - name: Check which plugins are installed
   command: "ls {{ grafana_data_dir }}/plugins"
   register: installed_plugins
