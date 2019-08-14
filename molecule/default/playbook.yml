@@ -4,6 +4,8 @@
   become: true
   roles:
     - role: ansible-role.grafana
+      grafana_plugins:
+        - alexanderzobnin-zabbix-app
       grafana_datasources:
         - name: "Zabbix"
           type: "alexanderzobnin-zabbix-datasource"
