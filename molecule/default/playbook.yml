@@ -4,3 +4,21 @@
   become: true
   roles:
     - role: ansible-role.grafana
+      grafana_datasources:
+        - name: "Zabbix"
+          type: "alexanderzobnin-zabbix-datasource"
+          access: "direct"
+          url: "http://zabbix-server.com"
+          basicAuth: false
+          # basicAuthUser: "admin"
+          # basicAuthPassword: "password"
+          url_username: Admin
+          url_password: zabbix
+          trends: true
+          isDefault: true
+          jsonData:
+            user: Admin
+            password: zabbix
+            tlsAuth: false
+            tlsAuthWithCACert: false
+            tlsSkipVerify: true
