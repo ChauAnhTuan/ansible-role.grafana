@@ -2,8 +2,9 @@
 dependencies: []
 
 galaxy_info:
+  role_name: grafana
   author: "ansible-roles"
-  description: Mysql client for Linux.
+  description: Grafana-Server.
   company: "ansible-roles"
   license: "license (BSD, MIT)"
   min_ansible_version: 2.4
@@ -21,5 +22,7 @@ galaxy_info:
         - 9
   galaxy_tags:
     - database
-    - mysql
+    - grafana
     - rdbms
+    - monitor
+    - graph
