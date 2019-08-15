@@ -9,14 +9,14 @@ galaxy_info:
   license: "license (BSD, MIT)"
   min_ansible_version: 2.4
   platforms:
-    - name: RedHat/Centos
+    - name: EL
       versions:
         - 6
         - 7
     - name: Ubuntu
       versions:
-        - 16.04
-        - 18.04
+        - trusty
+        - xenial
     - name: Debian
       versions:
         - 9
